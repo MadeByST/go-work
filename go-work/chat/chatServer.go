@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 )
-
+//single chat server
 func reciveInfo(con net.Conn){
 	buf := make([]byte,1024)
 	defer con.Close()

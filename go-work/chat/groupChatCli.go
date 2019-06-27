@@ -12,7 +12,7 @@ func mustCopy(dst io.Writer,src io.Reader){
 		log.Fatal(err)
 	}
 }
-
+//group chat cli
 func main(){
 	conn, e := net.Dial("tcp", "localhost:8080")
 	if e != nil{

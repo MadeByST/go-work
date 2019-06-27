@@ -8,7 +8,6 @@ import (
 )
 
 type client chan <-string
-
 var(
 	//单向通道只能写 chan <- string
 	entering = make(chan client)
@@ -57,7 +56,7 @@ func clientWriter(conn net.Conn,ch <- chan string){
 		fmt.Fprintln(conn,msg)
 	}
 }
-
+//group chat server
 func main(){
 	listener ,error := net.Listen("tcp","localhost:8080")
 	if error != nil{

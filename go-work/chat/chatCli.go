@@ -5,6 +5,7 @@ import (
 	"net"
 )
 
+//single chat client
 func main(){
 	conn, e := net.Dial("tcp", "127.0.0.1:8080")
 	if e != nil{
